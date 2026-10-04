@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: nz
+      POSTGRES_PASSWORD: nz
+      POSTGRES_DB: nz_store
+    ports:
+      - "5432:5432"
+    volumes:
+      - nz_pg:/var/lib/postgresql/data
+volumes:
+  nz_pg:
